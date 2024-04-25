@@ -1,0 +1,13 @@
+
+<app-server></app-server>
+<hr>
+{{getComponetName()}}
+<input [(ngModel)]="inputMessage">
+<button [disabled]="!disabledProp"
+(click)="onButtonClick()"
+>Click Me</button><br>
+{{message}}
+
+
+
+
