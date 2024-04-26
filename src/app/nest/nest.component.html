@@ -7,6 +7,9 @@
 (click)="onButtonClick()"
 >Click Me</button><br>
 {{message}}
+<input [(ngModel)] = "inputMessageDefaut"/>
+<input (input)="onInputChange($event)"/>
+{{inputMessage}}
 
 
 

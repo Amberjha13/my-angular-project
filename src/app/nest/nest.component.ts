@@ -17,9 +17,14 @@ export class NestComponent implements OnInit {
     disabledProp: boolean = false
     message: string= 'no message has been passed'
     inputMessage: string = 'Default Message'
+    inputMessageDefaut: string = 'Hi'
 
     constructor() {
         setTimeout(()=>{this.disabledProp = true}, 3000)
+    }
+
+    onInputChange(event: Event): void {
+           this.inputMessage = (<HTMLInputElement>event.target).value
     }
 
     onButtonClick(): void {
@@ -30,9 +35,5 @@ export class NestComponent implements OnInit {
         return this.componentName
     }
 
-    onInputChange(event: Event): void {
-        console.log((<HTMLInputElement>event.target).value)
-        this.inputMessage = (<HTMLInputElement> event.target).value
-    }
 
 }
