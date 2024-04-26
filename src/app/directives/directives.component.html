@@ -1,0 +1,14 @@
+<p>directives works!</p>
+<input
+  [(ngModel)]="name"
+  (focus)="onInputFocus()"
+/>
+<br>
+<button (click)="onButtonClick()">
+    Click Me
+</button>
+<p *ngIf="buttonClicked; else noName" [ngStyle]="{color: 'red'}">My Name is {{name}}</p>
+<ng-template #noName>
+  <p>Please Enter Your Name and Click Button</p>
+</ng-template>
+<p *ngFor="let num of loop">{{num}}</p>
